@@ -51,6 +51,14 @@
             
         }
 
+        function suma() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            let resultado = num1 - num2;
+            document.getElementById("resultado").value = "La suma de " + num1 + " y " + num2 + " es: " + resultado;
+            
+        }
+
 
     </script>
 </head>
@@ -65,7 +73,7 @@
         <aside>
             <h2>SELECIONA UNA OPCION</h2>
             <ul>
-                <button a href="#" onclick="altaSocio()">SUMA</button>
+                <button a href="#" onclick="suma()">SUMA</button>
                 <li><a href="#" onclick="resta()">RESTA</a></li>
                 <br>
                 <button a href="#" onclick="mostrarSocios()">MULTIPLICACIÓN </button>                
