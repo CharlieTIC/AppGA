@@ -44,17 +44,17 @@
     <script>
 
         function resta() {
-            let num1 = parseInt(document.getElementById("num1").value);
-            let num2 = parseInt(document.getElementById("num2").value);
-            let resultado = num1 - num2;
+            let num1 = prompt("Dime un numero para restar : ");
+            let num2 = prompt("Dime otro numero para restar : ");
+            let resultado = parseInt(num1) - parseInt(num2);
             document.getElementById("resultado").value = "La resta de " + num1 + " y " + num2 + " es: " + resultado;
             
         }
 
         function suma() {
-            let num1 = parseInt(document.getElementById("num1").value);
-            let num2 = parseInt(document.getElementById("num2").value);
-            let resultado = num1 - num2;
+            let num1 = prompt("Dime un numero para sumar: ");
+            let num2 = prompt("Dime otro numero para sumar: ");
+            let resultado = parseInt(num1) - parseInt(num2);
             document.getElementById("resultado").value = "La suma de " + num1 + " y " + num2 + " es: " + resultado;
             
         }
