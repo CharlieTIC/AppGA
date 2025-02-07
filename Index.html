@@ -41,6 +41,18 @@
             min-width: 250px;
         }
     </style>
+    <script>
+
+        function resta() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            let resultado = num1 - num2;
+            document.getElementById("resultado").value = "La resta de " + num1 + " y " + num2 + " es: " + resultado;
+            
+        }
+
+
+    </script>
 </head>
 
 
@@ -53,11 +65,11 @@
         <aside>
             <h2>SELECIONA UNA OPCION</h2>
             <ul>
-                <button a href="#" onclick="altaSocio()">OPERACIÓN SUMA</button>
-                <li><a href="#" onclick="bajaSocio()">Baja de un socio (por el número de socio o por DNI)</a></li>
+                <button a href="#" onclick="altaSocio()">SUMA</button>
+                <li><a href="#" onclick="resta()">RESTA</a></li>
                 <br>
-                <button a href="#" onclick="mostrarSocios()">Multiplicacion </button>                
-                <button a href="#" onclick="mostrarNumeroProductos()">Division</button>
+                <button a href="#" onclick="mostrarSocios()">MULTIPLICACIÓN </button>                
+                <button a href="#" onclick="mostrarNumeroProductos()">DIVISION</button>
             </ul>
         </aside>
         <div class="contenido">
