@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Gestión Administrativa</title>
+    <title>Gestión Administrativa</title>
     <script src="gestionGA.js"></script>
     <style>
         h1 {
@@ -12,26 +12,21 @@
             color: rgb(1, 42, 74);
         }
 
-
-        /* Contenedor que agrupa el menu y los resultados */
+       
         main {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
-            /* Espacio entre el menú y los resultados */
+            gap: 2rem;            
             text-align: left;
         }
-
 
         aside {
             background-color: #947a7a;
             padding: 1rem;
             border-radius: 8px;
             width: 400px;
-            
         }
-
 
         .contenido {
             background-color: #e0e0e0;
@@ -42,46 +37,56 @@
         }
     </style>
     <script>
-
         function resta() {
             let num1 = parseInt(document.getElementById("num1").value);
             let num2 = parseInt(document.getElementById("num2").value);
             let resultado = num1 - num2;
-            document.getElementById("resultado").value = "La resta de " + num1 + " y " + num2 + " es: " + resultado;
-            
+            document.getElementById("resultado").textContent = "La resta de " + num1 + " y " + num2 + " es: " + resultado;
         }
 
         function suma() {
             let num1 = parseInt(document.getElementById("num1").value);
             let num2 = parseInt(document.getElementById("num2").value);
-            let resultado = num1 - num2;
-            document.getElementById("resultado").value = "La suma de " + num1 + " y " + num2 + " es: " + resultado;
-            
+            let resultado = num1 + num2; 
+            document.getElementById("resultado").textContent = "La suma de " + num1 + " y " + num2 + " es: " + resultado;
         }
 
+        function multiplicacion() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            let resultado = num1 * num2;
+            document.getElementById("resultado").textContent = "La multiplicación de " + num1 + " y " + num2 + " es: " + resultado;
+        }
 
+        function division() {
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            let resultado = num1 / num2;
+            document.getElementById("resultado").textContent = "La división de " + num1 + " y " + num2 + " es: " + resultado;
+        }
     </script>
 </head>
-
-
 
 <body>
     <h1>CALCULADORA - GA</h1>
     <header></header>
     <main>
-
         <aside>
-            <h2>SELECIONA UNA OPCION</h2>
+            <h2>SELECCIONA UNA OPCIÓN</h2>
             <ul>
-                <button a href="#" onclick="suma()">SUMA</button>
-                <li><a href="#" onclick="resta()">RESTA</a></li>
+                <button onclick="suma()">SUMA</button>
                 <br>
-                <button a href="#" onclick="mostrarSocios()">MULTIPLICACIÓN </button>                
-                <button a href="#" onclick="mostrarNumeroProductos()">DIVISION</button>
+                <button onclick="resta()">RESTA</button>
+                <br>
+                <button onclick="multiplicacion()">MULTIPLICACIÓN</button>
+                <br>
+                <button onclick="division()">DIVISIÓN</button>
+                <br>
             </ul>
         </aside>
         <div class="contenido">
-
+            <input type="number" id="num1" placeholder="Número 1">
+            <input type="number" id="num2" placeholder="Número 2">
             <span id="resultado"></span>
         </div>
     </main>
